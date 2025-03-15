@@ -1,23 +1,27 @@
 <script>
   import Header from './components/Header.svelte';
   import Footer from './components/Footer.svelte';
+  import 'bootstrap/dist/css/bootstrap.min.css';
 
   let posts = [
-    {
-      id: 1,
-      title: "My First Post",
-      subtitle: "This is a subtitle for the first post.",
-      author: { name: 'Sergio' },
-      date: 'March 14, 2025',
-    },
-    {
-      id: 2,
-      title: "Another Blog Post",
-      subtitle: "Subtitle of another post.",
-      author: { name: 'Sergio' },
-      date: 'March 15, 2025',
-    }
-  ];
+  {
+    id: 1,
+    title: "My First Post",
+    subtitle: "This is a subtitle for the first post.",
+    author: { name: 'Sergio' },
+    date: 'March 14, 2025',
+    url: 'https://commons.wikimedia.org/wiki/Main_Page#/media/File:Lathmar_Holi_2022_in_Nandgaon,_Uttar_Pradesh_(edited).jpg'
+  },
+  {
+    id: 2,
+    title: "Another Blog Post",
+    subtitle: "Subtitle of another post.",
+    author: { name: 'Sergio' },
+    date: 'March 15, 2025',
+    url: 'https://commons.wikimedia.org/wiki/File:Some_Other_Image.jpg'
+  }
+];
+
 </script>
 
 <Header />
@@ -29,13 +33,17 @@
       <!-- Post preview-->
       {#each posts as post}
         <div class="post-preview">
-          <a href="/post/{post.id}">
+          <!-- <a href="/post/{post.id}">
             <h2 class="post-title">{post.title}</h2>
             <h3 class="post-subtitle">{post.subtitle}</h3>
-          </a>
+          </a> -->
+          <a href={post.url} target="_blank" rel="noopener noreferrer">
+            <h2 class="post-title">{post.id} - {post.title}</h2>
+            <h3 class="post-subtitle">{post.subtitle}</h3>
+          </a>  
           <p class="post-meta">
             Posted by
-            <a href="#">{post.author.name}</a>
+            <a href="https://github.com/SiracencoSerghei" target="_blank">{post.author.name}</a>
             on {post.date}
           </p>
         </div>

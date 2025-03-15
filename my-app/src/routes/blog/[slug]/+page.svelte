@@ -1,14 +1,28 @@
+<script context="module" lang="ts">
+  // Це функція load для отримання параметрів
+  export async function load({ params }) {
+    const { slug } = params;  // Отримуємо параметр slug з URL
+    console.log(slug); // Виводимо значення slug у консоль
 
-import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
+    // Ви можете зробити запит на сервер або підготувати контент на основі параметра
+    if (slug === 'hello-world') {
+      return {
+        title: 'Hello World',
+        content: 'Welcome to the blog!'
+      };
+    }
 
-export const load: PageLoad = ({ params }) => {
-	if (params.slug === 'hello-world') {
-		return {
-			title: 'Hello world!',
-			content: 'Welcome to our blog. Lorem ipsum dolor sit amet...'
-		};
-	}
+    return {
+      title: 'Page not found',
+      content: 'This page does not exist.'
+    };
+  }
+</script>
 
-	error(404, 'Not found');
-};
+<script lang="ts">
+  export let title: string;
+  export let content: string;
+</script>
+
+<h1>{title}</h1>
+<p>{content}</p>

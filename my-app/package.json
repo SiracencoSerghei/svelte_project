@@ -48,6 +48,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltestrap/sveltestrap": "^7.1.0",
-		"bootstrap": "^5.3.3"
+		"bootstrap": "^5.3.3",
+		"postcss-load-config": "^6.0.1"
 	}
 }

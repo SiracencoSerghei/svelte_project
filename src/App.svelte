@@ -3,6 +3,12 @@
   let name = 'world';
   let src = 'https://cdn.pixabay.com/photo/2016/08/24/14/29/earth-1617121_1280.jpg';
   let string = `this string contains some <strong>HTML!!!</strong>`
+  
+  let count = $state(0);
+  function increment() {
+    count+=1;
+  }
+
 </script>
 
 <style>
@@ -34,3 +40,7 @@
 
 <p>{string}</p>
 <p>{@html string}</p>
+
+<button onclick={increment}>
+Clicked {count} {count === 1 ? 'time' : 'times'}
+</button>

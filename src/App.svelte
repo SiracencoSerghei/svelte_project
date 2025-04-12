@@ -9,6 +9,18 @@
     count+=1;
   }
 
+  let numbers = $state([1, 2, 3, 4])
+  function addNumber() {
+  // numbers[numbers.length] = numbers.length + 1;
+  numbers.push(numbers.length + 1)
+  }
+
+  function sumArray(arr: number[]) {
+    return arr.reduce((acc, val) => acc + val, 0);
+  }
+  // derived state
+  let total = $derived(numbers.reduce((acc, val) => acc + val, 0))
+
 </script>
 
 <style>
@@ -43,4 +55,9 @@
 
 <button onclick={increment}>
 Clicked {count} {count === 1 ? 'time' : 'times'}
+</button>
+
+<p>{numbers.join(' + ')} = {sumArray(numbers)}</p>
+<button onclick={addNumber}>
+  Add a number
 </button>

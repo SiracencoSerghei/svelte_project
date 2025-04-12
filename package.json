@@ -1,7 +1,10 @@
 {
 	"name": "svelte-project",
-	"private": true,
+	"private": false,
 	"version": "0.0.1",
+	"description": "A SvelteKit tutorial project created during learning",
+	"author": "Serghei Siracenco <siracencoserghei@gmail.com>",
+	"license": "MIT",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",

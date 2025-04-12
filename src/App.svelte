@@ -12,14 +12,32 @@
   let numbers = $state([1, 2, 3, 4])
   function addNumber() {
   // numbers[numbers.length] = numbers.length + 1;
-  numbers.push(numbers.length + 1)
+   numbers.push(numbers.length + 1)
+  //  Inspecting state
+  console.log($state.snapshot(numbers));
   }
+  // $inspect(numbers);
+
+	// $inspect(numbers).with(console.trace);
 
   function sumArray(arr: number[]) {
     return arr.reduce((acc, val) => acc + val, 0);
   }
   // derived state
   let total = $derived(numbers.reduce((acc, val) => acc + val, 0))
+
+  // Effects
+  let elapsed = $state(0)
+  let interval = $state(1000)
+
+  $effect(() => {
+    const id = setInterval(() => {
+      elapsed += 1
+    }, interval)
+    return () => {
+      clearInterval(id)
+    }
+  })
 
 </script>
 
@@ -58,6 +76,15 @@ Clicked {count} {count === 1 ? 'time' : 'times'}
 </button>
 
 <p>{numbers.join(' + ')} = {sumArray(numbers)}</p>
+<p>{numbers.join(' + ')} = {total}</p>
 <button onclick={addNumber}>
   Add a number
 </button>
+
+ <!-- // Effects -->
+ <div>
+   <button onclick={() => interval /= 2} >Speed up</button>
+   <button onclick={() => interval *= 2}>Slow down</button>
+ </div>
+
+ <p>elapsed: {elapsed}</p>

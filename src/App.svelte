@@ -1,5 +1,7 @@
 <script lang="ts">
   import Nested from './Nested.svelte';
+  import Counter from './Counter.svelte';
+
   let name = 'world';
   let src = 'https://cdn.pixabay.com/photo/2016/08/24/14/29/earth-1617121_1280.jpg';
   let string = `this string contains some <strong>HTML!!!</strong>`
@@ -66,7 +68,9 @@
 <div class="image-container">
   <img src={src} alt="{name} image" />
 </div>
-<Nested/>
+
+<!-- using props -->
+<Nested answer={42}/>
 
 <p>{string}</p>
 <p>{@html string}</p>
@@ -88,3 +92,9 @@ Clicked {count} {count === 1 ? 'time' : 'times'}
  </div>
 
  <p>elapsed: {elapsed}</p>
+
+ <!-- Universal reactivity -->
+
+ <Counter />
+ <Counter />
+ <Counter />

@@ -1,4 +1,8 @@
-<p>This is a paragraph.</p>
+<script lang="ts">
+	// Declering props
+	let { answer } = $props()
+
+</script>
 
 <style>
 	p {
@@ -7,3 +11,8 @@
 		font-size: 2em;
 	}
 </style>
+
+<p>This is a paragraph.</p>
+
+<!-- using props -->
+<p>The answer is {answer}</p>

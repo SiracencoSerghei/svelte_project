@@ -1,23 +1,28 @@
-node_modules
+# Dependencies
+node_modules/
 
-# Output
+# Build output
 .output
 .vercel
 .netlify
 .wrangler
-/.svelte-kit
-/build
+.svelte-kit/
+build/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Env
+# Env files (secrets)
 .env
 .env.*
 !.env.example
 !.env.test
 
-# Vite
+# Vite temporary files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# SvelteKit build artifacts
+.svelte-kit/output/
+.svelte-kit/generated/

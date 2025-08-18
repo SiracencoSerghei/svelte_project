@@ -1,7 +1,10 @@
-<script>
-    import { counter } from '../shared.svelte.js'
+<script lang="ts">
+  let count = $state(0);
+  function increment() {
+    count += 1;
+  }
 </script>
 
-<button onclick={() => counter.count += 1}>
-    clicks: {counter.count}
+<button onclick={increment}>
+  Clicked {count} {count === 1 ? 'time' : 'times'}
 </button>

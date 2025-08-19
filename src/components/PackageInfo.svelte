@@ -1,5 +1,7 @@
 <script>
 	let { name, version, description, website } = $props();
+	// let staff = $props()
+	console.log('PackageInfo props:', { name, version, description, website });
 </script>
 
 <p>

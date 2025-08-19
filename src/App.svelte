@@ -7,6 +7,7 @@
   import NumberList from './components/NumberList.svelte';
   import Timer from './components/Timer.svelte';
   import PackageInfo from './components/PackageInfo.svelte';
+  import ColorPicker from './components/ColorPicker.svelte';
 
   let name = 'Sergio';
   let src = 'https://cdn.pixabay.com/photo/2016/08/24/14/29/earth-1617121_1280.jpg';
@@ -42,3 +43,5 @@
 <Counter />
 
 <PackageInfo {...pkg} />
+
+<ColorPicker />

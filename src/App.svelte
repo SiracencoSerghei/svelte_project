@@ -9,6 +9,7 @@
   import PackageInfo from './components/PackageInfo.svelte';
   import ColorPicker from './components/ColorPicker.svelte';
   import Thing from './components/Thing.svelte';
+  import { roll } from './utils/utils.js';
 
 	
 
@@ -29,21 +30,9 @@
       { id: 5, name: 'egg' }
     ]);
 
-</script>
+    let promise = $state(roll());
 
-<style>
-  button,
-  Thing {
-    margin: 10px auto;
-    /* 200px зверху і знизу, auto по боках */
-    padding: 10px 20px;
-    background-color: #007bff;
-    display: block;
-    /* щоб auto працювало */
-    width: fit-content;
-    /* кнопка буде по ширині контенту */
-}
-</style>
+</script>
 
 <Header {name} />
 <ImageBox {src} alt="{name} image" />
@@ -78,5 +67,20 @@
 	<Thing name={thing.name} />
 {/each}
 
+<button onclick={(()=> promise = roll())}>
+  roll the dice
+</button>
+<p>...rolling</p>
+<p>{promise ? `You rolled a ${promise}` : 'Click the button to roll'}</p>
 
+{#await promise}
+<p>...rolling</p>
+{:then number}
+<p>You rolled a {number}</p>
+{:catch error}
+<p style="color:red">{error.message}</p>
+{/await}
 
+{#await promise then number}
+<p>You rolled a {number}</p>
+{/await}

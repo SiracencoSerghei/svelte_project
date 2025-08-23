@@ -96,9 +96,9 @@
   <Thing name={thing.name} />
 {/each}
 
-<button onclick={() => (promise = roll())}> roll the dice </button>
+<!-- <button onclick={() => (promise = roll())}> roll the dice </button>
 <p>...rolling</p>
-<p>{promise ? `You rolled a ${promise}` : 'Click the button to roll'}</p>
+<p>{promise ? `You rolled a ${promise}` : 'Click the button to roll'}</p> -->
 
 {#await promise}
   <p>...rolling</p>
@@ -108,9 +108,9 @@
   <p style="color:red">{error.message}</p>
 {/await}
 
-{#await promise then number}
+<!-- {#await promise then number}
   <p>You rolled a {number}</p>
-{/await}
+{/await} -->
 
 <!-- <div {onpointermove}>
 	The pointer is at {m.x} x {m.y}
@@ -123,18 +123,18 @@
 </div> -->
 
 <!-- зробили в кінці кода - svelte:window on:pointermove -->
-<div class="tracker">
+<!-- <div class="tracker">
   The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
-</div>
+</div> -->
 
 <!-- спершу спрацьовує інпут, потім див -->
 <!-- <div onkeydown={(e) => alert(`<div> ${e.key}`)} role="presentation">
 	<input onkeydown={(e) => alert(`<input> ${e.key}`)} />
 </div> -->
 <!-- зворотний порядок - перший див, потім інпут -->
-<div onkeydowncapture={(e) => alert(`<div> ${e.key}`)} role="presentation">
+<!-- <div onkeydowncapture={(e) => alert(`<div> ${e.key}`)} role="presentation">
   <input onkeydowncapture={(e) => alert(`<input> ${e.key}`)} />
-</div>
+</div> -->
 
 <Stepper increment={() => (value += 1)} decrement={() => (value -= 1)} />
 <p>Value: {value}</p>
@@ -142,12 +142,12 @@
 <BigRedButton onclick={() => playSound(horn)} />
 <BigRedButton onclick={() => playSound(carHorn)} />
 
-<svelte:window
+<!-- <svelte:window
   on:pointermove={(e) => {
     m.x = e.clientX;
     m.y = e.clientY;
-  }}
-/>
+  }} 
+/>-->
 
 <style>
   .tracker {

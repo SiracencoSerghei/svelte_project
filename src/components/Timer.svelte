@@ -11,8 +11,8 @@
 </script>
 
 <div>
-  <button onclick={() => interval /= 2}>Speed up</button>
-  <button onclick={() => interval *= 2}>Slow down</button>
+  <button onclick={() => (interval /= 2)}>Speed up</button>
+  <button onclick={() => (interval *= 2)}>Slow down</button>
 </div>
 
 <p>elapsed: {elapsed}</p>

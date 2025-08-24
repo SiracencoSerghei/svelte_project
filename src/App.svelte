@@ -15,8 +15,11 @@
   import { onMount } from 'svelte';
   import horn from './utils/horn.mp3';
   import carHorn from './utils/Car-Horn.mp3';
+    import NumberInput from './components/InputNumber.svelte';
+    import InputCheckBox from './components/InputCheckBox.svelte';
+    import SelectBinding from './components/SelectBinding.svelte';
 
-  let name = 'Sergio';
+  let name = $state('Sergio');
   let src =
     'https://cdn.pixabay.com/photo/2016/08/24/14/29/earth-1617121_1280.jpg';
   let string = `this string contains some <strong>HTML!!!</strong>`;
@@ -142,6 +145,10 @@
 <BigRedButton onclick={() => playSound(horn)} />
 <BigRedButton onclick={() => playSound(carHorn)} />
 
+<NumberInput />
+<InputCheckBox />
+<SelectBinding />
+
 <!-- <svelte:window
   on:pointermove={(e) => {
     m.x = e.clientX;
@@ -150,7 +157,7 @@
 />-->
 
 <style>
-  .tracker {
+  /* .tracker {
     position: fixed;
     right: 1rem;
     bottom: 1rem;
@@ -158,8 +165,8 @@
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     border-radius: 0.5rem;
-    pointer-events: none; /* не блокує кліки по UI */
+    pointer-events: none;
     z-index: 9999;
     font-family: system-ui, sans-serif;
-  }
+  } */
 </style>

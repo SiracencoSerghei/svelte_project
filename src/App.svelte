@@ -9,15 +9,22 @@
   import PackageInfo from './components/PackageInfo.svelte';
   import ColorPicker from './components/ColorPicker.svelte';
   import Thing from './components/Thing.svelte';
-  import { roll } from './utils/utils.js';
+
   import Stepper from './components/Stepper.svelte';
   import BigRedButton from './components/BigRedButton.svelte';
   import { onMount } from 'svelte';
   import horn from './utils/horn.mp3';
   import carHorn from './utils/Car-Horn.mp3';
-    import NumberInput from './components/InputNumber.svelte';
-    import InputCheckBox from './components/InputCheckBox.svelte';
-    import SelectBinding from './components/SelectBinding.svelte';
+  import NumberInput from './components/InputNumber.svelte';
+  import InputCheckBox from './components/InputCheckBox.svelte';
+  import SelectBinding from './components/SelectBinding.svelte';
+  import InputsGroup from './components/InputsGroup.svelte';
+  import MultipleSelect from './components/MultipleSelect.svelte';
+  import InputsTextArea from './components/InputsTextArea.svelte';
+  import Promises from './components/Promises.svelte';
+  import PointerMouse from './components/PointerMouse.svelte';
+  import OneKeyDownCapture from './components/OneKeyDownCapture.svelte';
+  import CardsFlip from './components/CardsFlip.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -36,15 +43,6 @@
     { id: 4, name: 'doughnut' },
     { id: 5, name: 'egg' },
   ]);
-
-  let promise = $state(roll());
-
-  let m = $state({ x: 0, y: 0 });
-
-  // function onpointermove(event) {
-  //   m.x = event.clientX;
-  //   m.y = event.clientY;
-  // }
 
   let value = $state(0);
 
@@ -99,45 +97,9 @@
   <Thing name={thing.name} />
 {/each}
 
-<!-- <button onclick={() => (promise = roll())}> roll the dice </button>
-<p>...rolling</p>
-<p>{promise ? `You rolled a ${promise}` : 'Click the button to roll'}</p> -->
-
-{#await promise}
-  <p>...rolling</p>
-{:then number}
-  <p>You rolled a {number}</p>
-{:catch error}
-  <p style="color:red">{error.message}</p>
-{/await}
-
-<!-- {#await promise then number}
-  <p>You rolled a {number}</p>
-{/await} -->
-
-<!-- <div {onpointermove}>
-	The pointer is at {m.x} x {m.y}
-</div> -->
-
-<!-- <div class="tracker" onpointermove={(event) => {
-  m.x = event.clientX;
-  m.y = event.clientY}}>
-  The pointer is at {m.x} x {m.y}
-</div> -->
-
-<!-- зробили в кінці кода - svelte:window on:pointermove -->
-<!-- <div class="tracker">
-  The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
-</div> -->
-
-<!-- спершу спрацьовує інпут, потім див -->
-<!-- <div onkeydown={(e) => alert(`<div> ${e.key}`)} role="presentation">
-	<input onkeydown={(e) => alert(`<input> ${e.key}`)} />
-</div> -->
-<!-- зворотний порядок - перший див, потім інпут -->
-<!-- <div onkeydowncapture={(e) => alert(`<div> ${e.key}`)} role="presentation">
-  <input onkeydowncapture={(e) => alert(`<input> ${e.key}`)} />
-</div> -->
+<Promises />
+<PointerMouse />
+<OneKeyDownCapture />
 
 <Stepper increment={() => (value += 1)} decrement={() => (value -= 1)} />
 <p>Value: {value}</p>
@@ -149,24 +111,9 @@
 <InputCheckBox />
 <SelectBinding />
 
-<!-- <svelte:window
-  on:pointermove={(e) => {
-    m.x = e.clientX;
-    m.y = e.clientY;
-  }} 
-/>-->
+<InputsGroup />
+<MultipleSelect />
 
-<style>
-  /* .tracker {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    padding: 0.5rem 0.75rem;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border-radius: 0.5rem;
-    pointer-events: none;
-    z-index: 9999;
-    font-family: system-ui, sans-serif;
-  } */
-</style>
+<InputsTextArea />
+
+<CardsFlip />

@@ -1,7 +1,8 @@
 <script lang="ts">
   export let name: string;
 </script>
-<input type="text" bind:value="{name}" />
+
+<input type="text" bind:value={name} />
 
 <h1>Hello {name.toUpperCase()}!</h1>
 

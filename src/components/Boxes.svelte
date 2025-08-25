@@ -1,5 +1,5 @@
 <script>
-	import Box from './Box.svelte';
+  import Box from './Box.svelte';
 </script>
 
 <!-- <div class="boxes">
@@ -23,7 +23,7 @@
 </style> -->
 
 <div class="boxes">
-	<Box --color="red" />
-	<Box --color="green" />
-	<Box --color="blue" />
+  <Box --color="red" />
+  <Box --color="green" />
+  <Box --color="blue" />
 </div>

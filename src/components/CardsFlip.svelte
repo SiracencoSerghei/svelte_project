@@ -7,13 +7,25 @@
   <!-- старий варіант класу -->
   <!-- class="card {flipped ? 'flipped' : ''}" -->
 
-  <button class={['card', { flipped }]} onclick={() => (flipped = !flipped)}>
+  <!-- <button class={['card', { flipped }]} onclick={() => (flipped = !flipped)}> -->
+   <!-- <button 
+    class="card"
+    style="transform: {flipped ? 'rotateY(0)' : ''}; --bg-1: palegoldenrod; --bg-2: black; --bg-3: goldenrod"
+    onclick={() => (flipped = !flipped)}> -->
+   <button 
+    class="card"
+    style:transform={flipped ? 'rotateY(0)' : ''}
+    style:--bg-1= palegoldenrod
+    style:--bg-2= black
+    style:--bg-3= goldenrod
+    onclick={() => (flipped = !flipped)}>
     <div class="front">
       <span class="symbol">♠</span>
     </div>
     <div class="back">
       <div class="pattern"></div>
     </div>
+
   </button>
 </div>
 
@@ -42,10 +54,10 @@
     user-select: none;
     cursor: pointer;
   }
-
+/* 
   .card.flipped {
     transform: rotateY(0);
-  }
+  } */
 
   .front,
   .back {

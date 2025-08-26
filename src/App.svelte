@@ -26,6 +26,7 @@
   import OneKeyDownCapture from './components/OneKeyDownCapture.svelte';
   import CardsFlip from './components/CardsFlip.svelte';
   import Boxes from './components/Boxes.svelte';
+  import CanvasVrapper from './components/CanvasVrapper.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -120,3 +121,5 @@
 <CardsFlip />
 
 <Boxes />
+
+<CanvasVrapper />

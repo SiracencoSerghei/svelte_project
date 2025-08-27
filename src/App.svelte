@@ -27,6 +27,7 @@
   import CardsFlip from './components/CardsFlip.svelte';
   import Boxes from './components/Boxes.svelte';
   import CanvasVrapper from './components/CanvasVrapper.svelte';
+    import Tippi from './components/Tippi.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -122,4 +123,6 @@
 
 <Boxes />
 
-<CanvasVrapper />
+<!-- <CanvasVrapper /> -->
+
+<Tippi />

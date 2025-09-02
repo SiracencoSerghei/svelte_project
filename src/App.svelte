@@ -28,6 +28,8 @@
   import Boxes from './components/Boxes.svelte';
   import CanvasVrapper from './components/CanvasVrapper.svelte';
     import Tippi from './components/Tippi.svelte';
+    import FadeTransition from './components/FadeTransition.svelte';
+    import FlyTransition from './components/FlyTransition.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -126,3 +128,6 @@
 <!-- <CanvasVrapper /> -->
 
 <Tippi />
+
+<FadeTransition />
+<FlyTransition />

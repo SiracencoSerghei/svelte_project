@@ -30,6 +30,7 @@
     import Tippi from './components/Tippi.svelte';
     import FadeTransition from './components/FadeTransition.svelte';
     import FlyTransition from './components/FlyTransition.svelte';
+    import FadeFlyTransition from './components/FadeFlyTransition.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -131,3 +132,4 @@
 
 <FadeTransition />
 <FlyTransition />
+<FadeFlyTransition />

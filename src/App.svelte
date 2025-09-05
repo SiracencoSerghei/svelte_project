@@ -15,22 +15,26 @@
   import { onMount } from 'svelte';
   import horn from './utils/horn.mp3';
   import carHorn from './utils/Car-Horn.mp3';
-  import NumberInput from './components/InputNumber.svelte';
-  import InputCheckBox from './components/InputCheckBox.svelte';
+  import NumberInput from './components/Inputs/InputNumber.svelte';
+  import InputCheckBox from './components/Inputs/InputCheckBox.svelte';
   import SelectBinding from './components/SelectBinding.svelte';
-  import InputsGroup from './components/InputsGroup.svelte';
+  import InputsGroup from './components/Inputs/InputsGroup.svelte';
   import MultipleSelect from './components/MultipleSelect.svelte';
-  import InputsTextArea from './components/InputsTextArea.svelte';
+  import InputsTextArea from './components/Inputs/InputsTextArea.svelte';
   import Promises from './components/Promises.svelte';
   import PointerMouse from './components/PointerMouse.svelte';
   import OneKeyDownCapture from './components/OneKeyDownCapture.svelte';
   import CardsFlip from './components/CardsFlip.svelte';
   import Boxes from './components/Boxes.svelte';
   import CanvasVrapper from './components/CanvasVrapper.svelte';
-    import Tippi from './components/Tippi.svelte';
-    import FadeTransition from './components/FadeTransition.svelte';
-    import FlyTransition from './components/FlyTransition.svelte';
-    import FadeFlyTransition from './components/FadeFlyTransition.svelte';
+  import Tippi from './components/Tippi.svelte';
+  import FadeTransition from './components/Transitions/FadeTransition.svelte';
+  import FlyTransition from './components/Transitions/FlyTransition.svelte';
+  import FadeFlyTransition from './components/Transitions/FadeFlyTransition.svelte';
+  import CastomTransition from './components/Transitions/CustomTransition.svelte';
+  import CastomJsTransition from './components/Transitions/CustomJsTransition.svelte';
+    import TransitionEvents from './components/Transitions/TransitionEvents.svelte';
+    import GlobalTransition from './components/Transitions/GlobalTransition.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -133,3 +137,8 @@
 <FadeTransition />
 <FlyTransition />
 <FadeFlyTransition />
+<CastomTransition />
+<CastomJsTransition />
+<TransitionEvents />
+<GlobalTransition />
+

@@ -35,6 +35,7 @@
   import CastomJsTransition from './components/Transitions/CustomJsTransition.svelte';
     import TransitionEvents from './components/Transitions/TransitionEvents.svelte';
     import GlobalTransition from './components/Transitions/GlobalTransition.svelte';
+    import KeyBlocks from './components/Transitions/KeyBlocks.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -141,4 +142,4 @@
 <CastomJsTransition />
 <TransitionEvents />
 <GlobalTransition />
-
+<KeyBlocks />

@@ -36,6 +36,7 @@
     import TransitionEvents from './components/Transitions/TransitionEvents.svelte';
     import GlobalTransition from './components/Transitions/GlobalTransition.svelte';
     import KeyBlocks from './components/Transitions/KeyBlocks.svelte';
+    import RowState from './components/AdvancedReactivity/RowState.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -143,3 +144,5 @@
 <TransitionEvents />
 <GlobalTransition />
 <KeyBlocks />
+
+<RowState />

@@ -33,13 +33,12 @@
   import FadeFlyTransition from './components/Transitions/FadeFlyTransition.svelte';
   import CastomTransition from './components/Transitions/CustomTransition.svelte';
   import CastomJsTransition from './components/Transitions/CustomJsTransition.svelte';
-    import TransitionEvents from './components/Transitions/TransitionEvents.svelte';
-    import GlobalTransition from './components/Transitions/GlobalTransition.svelte';
-    import KeyBlocks from './components/Transitions/KeyBlocks.svelte';
-    import RowState from './components/AdvancedReactivity/RowState.svelte';
-    import ReactiveClasses from './components/AdvancedReactivity/ReactiveClasses.svelte';
-
-    
+  import TransitionEvents from './components/Transitions/TransitionEvents.svelte';
+  import GlobalTransition from './components/Transitions/GlobalTransition.svelte';
+  import KeyBlocks from './components/Transitions/KeyBlocks.svelte';
+  import RowState from './components/AdvancedReactivity/RowState.svelte';
+  import ReactiveClasses from './components/AdvancedReactivity/ReactiveClasses.svelte';
+  import GettersSetters from './components/AdvancedReactivity/GettersSetters.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -150,3 +149,5 @@
 
 <RowState />
 <ReactiveClasses />
+
+<GettersSetters />

@@ -4,40 +4,39 @@
 
   let visible = $state(true);
 
-//   function spin(node, { duration }) {
-//     return {
-//       duration,
-//       css: (t, u) => ``,
-//     };
-//   }
+  //   function spin(node, { duration }) {
+  //     return {
+  //       duration,
+  //       css: (t, u) => ``,
+  //     };
+  //   }
 
-//   function fade(node, { delay = 0, duration = 400 }) {
-//     const o = +getComputedStyle(node).opacity;
+  //   function fade(node, { delay = 0, duration = 400 }) {
+  //     const o = +getComputedStyle(node).opacity;
 
-//     return {
-//       delay,
-//       duration,
-//       css: (t) => `opacity: ${t * o}`,
-//     };
-//   }
+  //     return {
+  //       delay,
+  //       duration,
+  //       css: (t) => `opacity: ${t * o}`,
+  //     };
+  //   }
 
-function spin(node, { duration }) {
-		return {
-			duration,
-			css: (t, u) => {
-				const eased = elasticOut(t);
+  function spin(node, { duration }) {
+    return {
+      duration,
+      css: (t, u) => {
+        const eased = elasticOut(t);
 
-				return `
+        return `
 					transform: scale(${eased}) rotate(${eased * 1080}deg);
 					color: hsl(
 						${Math.trunc(t * 360)},
 						${Math.min(100, 1000 * u)}%,
 						${Math.min(50, 500 * u)}%
-					);`
-			}
-		};
-	}
-
+					);`;
+      },
+    };
+  }
 </script>
 
 <label>

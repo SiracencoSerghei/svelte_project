@@ -39,6 +39,7 @@
   import RowState from './components/AdvancedReactivity/RowState.svelte';
   import ReactiveClasses from './components/AdvancedReactivity/ReactiveClasses.svelte';
   import GettersSetters from './components/AdvancedReactivity/GettersSetters.svelte';
+    import ReactiveBuiltIns from './components/AdvancedReactivity/ReactiveBuiltIns.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -151,3 +152,4 @@
 <ReactiveClasses />
 
 <GettersSetters />
+<ReactiveBuiltIns />

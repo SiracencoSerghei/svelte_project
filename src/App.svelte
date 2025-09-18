@@ -1,33 +1,33 @@
 <script lang="ts">
-  import Header from './components/Header.svelte';
-  import ImageBox from './components/ImageBox.svelte';
-  import Nested from './components/Nested.svelte';
-  import Counter from './components/Counter.svelte';
-  import CounterButton from './components/CounterButton.svelte';
-  import NumberList from './components/NumberList.svelte';
-  import Timer from './components/Timer.svelte';
-  import PackageInfo from './components/PackageInfo.svelte';
-  import ColorPicker from './components/ColorPicker.svelte';
-  import Thing from './components/Thing.svelte';
+  import Header from './components/basic/Header.svelte';
+  import ImageBox from './components/basic/ImageBox.svelte';
+  import Nested from './components/basic/Nested.svelte';
+  import Counter from './components/basic/Counter.svelte';
+  import CounterButton from './components/basic/CounterButton.svelte';
+  import NumberList from './components/basic/NumberList.svelte';
+  import Timer from './components/basic/Timer.svelte';
+  import PackageInfo from './components/basic/PackageInfo.svelte';
+  import ColorPicker from './components/basic/ColorPicker.svelte';
+  import Thing from './components/basic/Thing.svelte';
 
-  import Stepper from './components/Stepper.svelte';
-  import BigRedButton from './components/BigRedButton.svelte';
+  import Stepper from './components/basic/Stepper.svelte';
+  import BigRedButton from './components/basic/BigRedButton.svelte';
   import { onMount } from 'svelte';
   import horn from './utils/horn.mp3';
   import carHorn from './utils/Car-Horn.mp3';
   import NumberInput from './components/Inputs/InputNumber.svelte';
   import InputCheckBox from './components/Inputs/InputCheckBox.svelte';
-  import SelectBinding from './components/SelectBinding.svelte';
+  import SelectBinding from './components/basic/SelectBinding.svelte';
   import InputsGroup from './components/Inputs/InputsGroup.svelte';
-  import MultipleSelect from './components/MultipleSelect.svelte';
+  import MultipleSelect from './components/basic/MultipleSelect.svelte';
   import InputsTextArea from './components/Inputs/InputsTextArea.svelte';
-  import Promises from './components/Promises.svelte';
-  import PointerMouse from './components/PointerMouse.svelte';
-  import OneKeyDownCapture from './components/OneKeyDownCapture.svelte';
-  import CardsFlip from './components/CardsFlip.svelte';
-  import Boxes from './components/Boxes.svelte';
-  import CanvasVrapper from './components/CanvasVrapper.svelte';
-  import Tippi from './components/Tippi.svelte';
+  import Promises from './components/basic/Promises.svelte';
+  import PointerMouse from './components/basic/PointerMouse.svelte';
+  import OneKeyDownCapture from './components/basic/OneKeyDownCapture.svelte';
+  import CardsFlip from './components/basic/CardsFlip.svelte';
+  import Boxes from './components/basic/Boxes.svelte';
+  import CanvasVrapper from './components/basic/CanvasVrapper.svelte';
+  import Tippi from './components/basic/Tippi.svelte';
   import FadeTransition from './components/Transitions/FadeTransition.svelte';
   import FlyTransition from './components/Transitions/FlyTransition.svelte';
   import FadeFlyTransition from './components/Transitions/FadeFlyTransition.svelte';
@@ -39,7 +39,8 @@
   import RowState from './components/AdvancedReactivity/RowState.svelte';
   import ReactiveClasses from './components/AdvancedReactivity/ReactiveClasses.svelte';
   import GettersSetters from './components/AdvancedReactivity/GettersSetters.svelte';
-    import ReactiveBuiltIns from './components/AdvancedReactivity/ReactiveBuiltIns.svelte';
+  import ReactiveBuiltIns from './components/AdvancedReactivity/ReactiveBuiltIns.svelte';
+  import CounterAdvance from './components/AdvancedReactivity/CounterAdvance.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -144,12 +145,17 @@
 <FadeFlyTransition />
 <CastomTransition />
 <CastomJsTransition />
-<TransitionEvents />
+<TransitionEvents />https://www.facebook.com/stories/175105847306857/UzpfSVNDOjE0NTEyOTM1Mzk0NzgwNzA=/?view_single=1
 <GlobalTransition />
 <KeyBlocks />
 
 <RowState />
-<ReactiveClasses />
+<ReactiveClasses />https://www.facebook.com/stories/175105847306857/UzpfSVNDOjE0NTEyOTM1Mzk0NzgwNzA=/?view_single=1
 
 <GettersSetters />
 <ReactiveBuiltIns />
+
+<CounterAdvance />
+<CounterAdvance />
+<CounterAdvance />
+

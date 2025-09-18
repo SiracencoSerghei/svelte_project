@@ -1,5 +1,5 @@
 <script>
-  import { roll } from '../utils/utils.js';
+  import { roll } from '../../utils/utils.js';
   let promise = $state(roll());
 </script>
 

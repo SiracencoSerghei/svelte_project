@@ -41,6 +41,7 @@
   import GettersSetters from './components/AdvancedReactivity/GettersSetters.svelte';
   import ReactiveBuiltIns from './components/AdvancedReactivity/ReactiveBuiltIns.svelte';
   import CounterAdvance from './components/AdvancedReactivity/CounterAdvance.svelte';
+  import Snippets from './components/AdvancedReactivity/Snippets.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -145,12 +146,14 @@
 <FadeFlyTransition />
 <CastomTransition />
 <CastomJsTransition />
-<TransitionEvents />https://www.facebook.com/stories/175105847306857/UzpfSVNDOjE0NTEyOTM1Mzk0NzgwNzA=/?view_single=1
+<TransitionEvents
+/>https://www.facebook.com/stories/175105847306857/UzpfSVNDOjE0NTEyOTM1Mzk0NzgwNzA=/?view_single=1
 <GlobalTransition />
 <KeyBlocks />
 
 <RowState />
-<ReactiveClasses />https://www.facebook.com/stories/175105847306857/UzpfSVNDOjE0NTEyOTM1Mzk0NzgwNzA=/?view_single=1
+<ReactiveClasses
+/>https://www.facebook.com/stories/175105847306857/UzpfSVNDOjE0NTEyOTM1Mzk0NzgwNzA=/?view_single=1
 
 <GettersSetters />
 <ReactiveBuiltIns />
@@ -159,3 +162,4 @@
 <CounterAdvance />
 <CounterAdvance />
 
+<Snippets />

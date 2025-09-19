@@ -1,20 +1,24 @@
 <script>
-	import { SvelteDate } from 'svelte/reactivity';
+  import { SvelteDate } from 'svelte/reactivity';
 
-	// let date = new Date();
-	let date = new SvelteDate();
+  // let date = new Date();
+  let date = new SvelteDate();
 
-	const pad = (n) => n < 10 ? '0' + n : n;
+  const pad = (n) => (n < 10 ? '0' + n : n);
 
-	$effect(() => {
-		const interval = setInterval(() => {
-			date.setTime(Date.now());
-		}, 1000);
+  $effect(() => {
+    const interval = setInterval(() => {
+      date.setTime(Date.now());
+    }, 1000);
 
-		return () => {
-			clearInterval(interval);
-		};
-	});
+    return () => {
+      clearInterval(interval);
+    };
+  });
 </script>
 
-<p>The time is {date.getHours()}:{pad(date.getMinutes())}:{pad(date.getSeconds())}</p>
+<p>
+  The time is {date.getHours()}:{pad(date.getMinutes())}:{pad(
+    date.getSeconds(),
+  )}
+</p>

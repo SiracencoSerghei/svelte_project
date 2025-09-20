@@ -42,6 +42,7 @@
   import ReactiveBuiltIns from './components/AdvancedReactivity/ReactiveBuiltIns.svelte';
   import CounterAdvance from './components/AdvancedReactivity/CounterAdvance.svelte';
   import Snippets from './components/AdvancedReactivity/Snippets.svelte';
+    import SnippetsToComponent from './components/AdvancedReactivity/SnippetsToComponent.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -147,13 +148,13 @@
 <CastomTransition />
 <CastomJsTransition />
 <TransitionEvents
-/>https://www.facebook.com/stories/175105847306857/UzpfSVNDOjE0NTEyOTM1Mzk0NzgwNzA=/?view_single=1
+/>
 <GlobalTransition />
 <KeyBlocks />
 
 <RowState />
 <ReactiveClasses
-/>https://www.facebook.com/stories/175105847306857/UzpfSVNDOjE0NTEyOTM1Mzk0NzgwNzA=/?view_single=1
+/>
 
 <GettersSetters />
 <ReactiveBuiltIns />
@@ -163,3 +164,4 @@
 <CounterAdvance />
 
 <Snippets />
+<SnippetsToComponent />

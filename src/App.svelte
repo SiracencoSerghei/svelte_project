@@ -43,6 +43,7 @@
   import CounterAdvance from './components/AdvancedReactivity/CounterAdvance.svelte';
   import Snippets from './components/AdvancedReactivity/Snippets.svelte';
     import SnippetsToComponent from './components/AdvancedReactivity/SnippetsToComponent.svelte';
+    import Tweened from './components/AdvancedReactivity/Tweened.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -165,3 +166,6 @@
 
 <Snippets />
 <SnippetsToComponent />
+
+<Tweened />
+

@@ -54,7 +54,7 @@
 	// приймаємо дані, поле для фільтра, сніпет children та сніпет row
 	let { data, field, children, row } = $props();
 
-	let search = $state('');
+	let search = $state('Aqua');
 
 	// відфільтрований масив
 	let filtered = $derived.by(() => {

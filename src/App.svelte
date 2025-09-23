@@ -45,6 +45,7 @@
     import SnippetsToComponent from './components/AdvancedReactivity/SnippetsToComponent.svelte';
     import Tweened from './components/AdvancedReactivity/Tweened.svelte';
     import Springs from './components/AdvancedReactivity/Springs.svelte';
+    import ContentEditableBinding from './components/AdvancedReactivity/ContentEditableBinding.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -170,4 +171,5 @@
 
 <Tweened />
 
-<Springs />
+<!-- <Springs /> -->
+ <ContentEditableBinding />

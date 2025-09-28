@@ -47,6 +47,7 @@
     import Springs from './components/AdvancedReactivity/Springs.svelte';
     import ContentEditableBinding from './components/AdvancedReactivity/ContentEditableBinding.svelte';
     import EachBinding from './components/AdvancedReactivity/EachBinding.svelte';
+    import AudioPlayWrap from './components/AdvancedReactivity/AudioPlayWrap.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -175,3 +176,4 @@
 <!-- <Springs /> -->
  <ContentEditableBinding />
  <EachBinding />
+ <AudioPlayWrap />

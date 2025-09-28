@@ -1,9 +1,13 @@
 <script>
+	import { currentAudio } from '../../lib/stores/audioStore.js';
+
 	let { src, title, artist } = $props();
 
 	let time = $state(0);
 	let duration = $state(0);
 	let paused = $state(true);
+
+	let audioEl;
 
 	function format(time) {
 		if (isNaN(time)) return '...';
@@ -13,10 +17,23 @@
 
 		return `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
 	}
+
+	// коли користувач тисне play/pause
+	function togglePlay() {
+		if (paused) {
+			// спочатку поставити на паузу інші плеєри
+			currentAudio.update(a => {
+				if (a && a !== audioEl) a.pause();
+				return audioEl;
+			});
+		}
+		paused = !paused;
+	}
 </script>
 
 <div class={['player', { paused }]}>
 		<audio
+		bind:this={audioEl}  
 		{src}
 		bind:currentTime={time}
 		bind:duration
@@ -28,7 +45,7 @@
 	<button
 		class="play"
 		aria-label={paused ? 'play' : 'pause'}
-		onclick={() => paused = !paused}
+		onclick={togglePlay}
 	></button>
 
 	<div class="info">

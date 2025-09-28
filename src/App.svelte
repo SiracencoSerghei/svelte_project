@@ -46,6 +46,7 @@
     import Tweened from './components/AdvancedReactivity/Tweened.svelte';
     import Springs from './components/AdvancedReactivity/Springs.svelte';
     import ContentEditableBinding from './components/AdvancedReactivity/ContentEditableBinding.svelte';
+    import EachBinding from './components/AdvancedReactivity/EachBinding.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -173,3 +174,4 @@
 
 <!-- <Springs /> -->
  <ContentEditableBinding />
+ <EachBinding />

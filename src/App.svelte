@@ -48,6 +48,7 @@
     import ContentEditableBinding from './components/AdvancedReactivity/ContentEditableBinding.svelte';
     import EachBinding from './components/AdvancedReactivity/EachBinding.svelte';
     import AudioPlayWrap from './components/AdvancedReactivity/AudioPlayWrap.svelte';
+    import Dimensions from './components/AdvancedReactivity/Dimensions.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -177,3 +178,6 @@
  <ContentEditableBinding />
  <EachBinding />
  <AudioPlayWrap />
+
+ <Dimensions />
+ 

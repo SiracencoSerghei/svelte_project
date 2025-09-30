@@ -49,6 +49,7 @@
     import EachBinding from './components/AdvancedReactivity/EachBinding.svelte';
     import AudioPlayWrap from './components/AdvancedReactivity/AudioPlayWrap.svelte';
     import Dimensions from './components/AdvancedReactivity/Dimensions.svelte';
+    import This from './components/AdvancedReactivity/This.svelte';
 
   let name = $state('Sergio');
   let src =
@@ -180,4 +181,7 @@
  <AudioPlayWrap />
 
  <Dimensions />
+
+ <!-- <This /> -->
+
  
